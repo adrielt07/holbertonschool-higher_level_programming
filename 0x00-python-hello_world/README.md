@@ -16,7 +16,7 @@
 - 8-concat_edges.py - prints a new sentence from variable 'str' without declaring a new variable
 - 9-easter_egg.py - prints "The Zen of Python", by Tim Peters
 - 100-write.py - prints 'str' to stderr
-- 101-compile - compiles python file (location of the file should be stored in $PYFILE in ENV PATH)
+- 101-compile - compiles python file, renames to filename.pyc and moved to current location (location of the file should be stored in $PYFILE in ENV PATH)
 
 ## C Program
 - list.h - Contains Structure and prototypes for 10-check_cycle.c
