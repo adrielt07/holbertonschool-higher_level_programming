@@ -5,6 +5,7 @@
  * @head: takes address of new node
  * @number: value of new node
  * Return: NULL if malloc failed or head is null
+ * else return new linked list
  */
 listint_t *insert_node(listint_t **head, int number)
 {
@@ -25,4 +26,5 @@ listint_t *insert_node(listint_t **head, int number)
 	new->n = number;
 	new->next = prev->next;
 	prev->next = new;
+	return (new);
 }
