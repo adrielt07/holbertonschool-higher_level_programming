@@ -2,4 +2,4 @@
 for i in range(89):
     if i % 10 > i // 10:
         print("{}".format(i), end=", ")
-print("89")
+print("{}".format(89))
