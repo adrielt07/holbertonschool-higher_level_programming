@@ -20,7 +20,10 @@
 
 ## C Program
 - list.h - Contains Structure and prototypes for 10-check_cycle.c
+- 10-linked_list.c
+  - print_listint - prints all elements in listint_t list
+  - add_nodeint - adds a new node at the beginning of a listint_t list
+  - free_listint - frees a listint_t list
 - 10-check_cyle.c - Checks if linked list has a cycle
-
 ### Authors
 Adriel Tolentino
