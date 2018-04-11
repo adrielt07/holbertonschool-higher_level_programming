@@ -17,6 +17,9 @@
 - 9-easter_egg.py - prints "The Zen of Python", by Tim Peters
 - 100-write.py - prints 'str' to stderr
 - 101-compile - compiles python file, renames it to filename.pyc and moves it to current location (location of the file should be stored in $PYFILE in ENV PATH)
+- 102-magic_calculation - A Python function that  that does exactly the same as the following Python bytecode below:
+![102-magic_calculation](https://user-images.githubusercontent.com/33245729/38648435-0098e626-3da6-11e8-8d0e-6aa5e7276c93.JPG)
+
 
 ## C Program
 - list.h - Contains Structure and prototypes for 10-check_cycle.c
