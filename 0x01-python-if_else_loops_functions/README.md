@@ -1,4 +1,4 @@
-# Python - Hello, World
+# Python - if/else, loops, functions
 
 ### Documentation
 
@@ -22,6 +22,7 @@
 - 100-print_tebahpla.py - prints the alphabet in reverse and alternative lowercase and uppercase
 - 101-remove_char_at.py - removes a character in certain position in string
 - 102-magic_calculation.py - Python function that has the same output as below in ByteCode:
+![102-magic_calculation](https://user-images.githubusercontent.com/33245729/38648348-986d66da-3da5-11e8-8ea8-a3c6faa32dea.JPG)
 
 ## C Program
 - list.h - Contains Structure and prototypes for 13-insert_number.c and linked_lists.c 
