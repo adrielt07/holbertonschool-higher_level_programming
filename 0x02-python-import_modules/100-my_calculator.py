@@ -5,7 +5,7 @@ if __name__ == "__main__":
 
     if len(sys.argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        exit (1)
+        exit(1)
 
     a = int(sys.argv[1])
     b = int(sys.argv[3])
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     for i in operator:
         if i[0] == sys.argv[2]:
             print("{} {} {} = {:d}".format(a, i[0], b, i[1]))
-            exit (0)
+            exit(0)
 
     print("Unknown operator. Available operators: +, -, * and /")
-    exit (1)
+    exit(1)
