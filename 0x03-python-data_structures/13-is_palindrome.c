@@ -46,9 +46,13 @@ int is_palindrome(listint_t **head)
 	while (len >= 0)
 	{
 		if (list[len] != list[j])
+		{
+			free(list);
 			return (0);
+		}
 		len--;
 		j++;
 	}
+	free(list);
 	return (1);
 }
