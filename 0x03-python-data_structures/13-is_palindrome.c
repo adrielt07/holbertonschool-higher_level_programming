@@ -29,9 +29,6 @@ int is_palindrome(listint_t **head)
 	int i = 0, len = len_list(*head) - 1, j = 0;
 	listint_t *current = *head;
 
-	if (*head == NULL)
-		return (1);
-
 	list = malloc(sizeof(unsigned int *) * len);
 	if (list == NULL)
 		return (EXIT_FAILURE);
