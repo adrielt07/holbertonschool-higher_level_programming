@@ -33,7 +33,6 @@ int is_palindrome(listint_t **head)
 	while (current)
 	{
 		list[i] = current->n;
-		printf("value of list[%d]: is [%d]\n", i, current->n);
 		current = current->next;
 		i++;
 	}
