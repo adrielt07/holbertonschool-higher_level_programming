@@ -1,5 +1,5 @@
 #include "lists.h"
-#define buffer 1024
+#define buffer 9999
 
 /**
  * len_list - gets the len of linked list
