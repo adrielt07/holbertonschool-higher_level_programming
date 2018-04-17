@@ -10,7 +10,8 @@
 int len_list(listint_t *head)
 {
 	int i = 0;
-	while(head)
+
+	while (head)
 	{
 		head = head->next;
 		i++;
@@ -30,12 +31,7 @@ int is_palindrome(listint_t **head)
 	int i = 0, len = len_list(*head), j = 0;
 	listint_t *current = *head;
 
-/*	if (current == NULL)
-		return (0);
-	if (current->next)
-		return (1);
-*/
-	while(current)
+	while (current)
 	{
 		list[i] = current->n;
 		printf("value of list[%d]: is [%d]\n", i, current->n);
