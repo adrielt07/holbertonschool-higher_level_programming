@@ -34,7 +34,7 @@ int is_palindrome(listint_t **head)
 
 	list = malloc(sizeof(int *) * len);
 	if (list == NULL)
-		return (0);
+		return (EXIT_FAILURE);
 
 	while (current)
 	{
