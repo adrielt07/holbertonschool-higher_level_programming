@@ -1,5 +1,4 @@
 #include "lists.h"
-#define buffer 9999
 
 /**
  * len_list - gets the len of linked list
@@ -26,9 +25,11 @@ int len_list(listint_t *head)
 
 int is_palindrome(listint_t **head)
 {
-	int list[buffer];
-	int i = 0, len = len_list(*head), j = 0;
+	unsigned int *list;
+	int i = 0, len = len_list(*head) - 1, j = 0;
 	listint_t *current = *head;
+
+	list = malloc(sizeof(unsigned int *) * len);
 
 	while (current)
 	{
@@ -36,13 +37,17 @@ int is_palindrome(listint_t **head)
 		current = current->next;
 		i++;
 	}
-	len--;
+
 	while (len >= 0)
 	{
 		if (list[len] != list[j])
+		{
+			free(list);
 			return (0);
+		}
 		len--;
 		j++;
 	}
+	free(list);
 	return (1);
 }
