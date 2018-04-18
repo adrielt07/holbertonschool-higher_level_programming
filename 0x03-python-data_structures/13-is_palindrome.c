@@ -30,7 +30,7 @@ int is_palindrome(listint_t **head)
 	listint_t *current = *head;
 
 	list = malloc(sizeof(unsigned int *) * len);
-	if (!(list))
+	if (list == NULL)
 		return (EXIT_FAILURE);
 	while (current)
 	{
