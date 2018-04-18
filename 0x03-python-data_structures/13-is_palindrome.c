@@ -31,7 +31,7 @@ int is_palindrome(listint_t **head)
 
 	list = malloc(sizeof(unsigned int *) * len);
 	if (list == NULL)
-		return (EXIT_FAILURE);
+		return (0);
 	while (current)
 	{
 		list[i] = current->n;
