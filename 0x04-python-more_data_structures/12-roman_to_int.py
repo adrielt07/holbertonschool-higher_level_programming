@@ -18,7 +18,7 @@ def roman_to_int(roman_string):
     for idx in range(length):
         result += roman[roman_string[idx]]
     if len(roman_string) > 1:
-        if roman_string[length-1] > roman_string[length-2]:
+        if roman[roman_string[-1]] > roman[roman_string[-2]]:
             result -= roman[roman_string[idx-1]]*2
     return result
 
