@@ -8,16 +8,12 @@ def roman_to_int(roman_string):
     if isinstance(roman_string, str) is False:
         return 0
 
-#    r_string = list(roman_string)
-#    r_string.reverse()
-#    for char in r_string:
-#        if r_string.count(char) > 3:
-#            return 0
-
     length = len(roman_string)
     for idx in range(length):
         result += roman[roman_string[idx]]
-    if len(roman_string) > 1:
-        if roman[roman_string[-1]] > roman[roman_string[-2]]:
-            result -= roman[roman_string[-2]]*2
+    for indx in range(length):
+        if indx > 0:
+            if roman[roman_string[indx-1]] < roman[roman_string[indx]]:
+#        if roman[roman_string[i]] < roman[roman_string[i+1]] and roman[:
+                result -= roman[roman_string[indx-1]]*2
     return result
