@@ -14,6 +14,5 @@ def roman_to_int(roman_string):
     for indx in range(length):
         if indx > 0:
             if roman[roman_string[indx-1]] < roman[roman_string[indx]]:
-#        if roman[roman_string[i]] < roman[roman_string[i+1]] and roman[:
                 result -= roman[roman_string[indx-1]]*2
     return result
