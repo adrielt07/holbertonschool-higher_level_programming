@@ -2,16 +2,17 @@
 def roman_to_int(roman_string):
 
     roman = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-    r_string = list(roman_string)
-    r_string.reverse()
     result = 0
     check = 0
 
-    if roman_string is None:
+    if isinstance(roman_string, str) is False:
         return 0
-#    for char in r_string:
-#        if r_string.count(char) > 3:
-#            return 0
+
+    r_string = list(roman_string)
+    r_string.reverse()
+    for char in r_string:
+        if r_string.count(char) > 3:
+            return 0
 
     length = len(roman_string)
  #   if length > 3:
