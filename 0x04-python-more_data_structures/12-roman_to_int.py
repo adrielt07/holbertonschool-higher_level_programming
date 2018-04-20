@@ -15,19 +15,24 @@ def roman_to_int(roman_string):
             return 0
 
     length = len(roman_string)
-    if length > 3:
-        for i in range(length-1):
-            if roman[roman_string[i]] < roman[roman_string[i+1]]:
-                check += 1
-    if check >= 1:
-        return 0
-
     for idx in range(length):
         result += roman[roman_string[idx]]
     if len(roman_string) > 1:
         if roman_string[length-1] > roman_string[length-2]:
             result -= roman[roman_string[idx-1]]*2
     return result
+
+# Some Edge cases:
+
+#    if length > 3:
+#        for i in range(length-1):
+#            if roman[roman_string[i]] < roman[roman_string[i+1]]:
+#                check += 1
+#    if check >= 1:
+#        return 0
+
+
+
 #    for elem in r_string:
 #        if r_string[0] > elem:
 #            check += 1
