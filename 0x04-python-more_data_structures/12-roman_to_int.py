@@ -9,17 +9,17 @@ def roman_to_int(roman_string):
 
     if roman_string is None:
         return 0
-    for char in r_string:
-        if r_string.count(char) > 3:
-            return 0
+#    for char in r_string:
+#        if r_string.count(char) > 3:
+#            return 0
 
     length = len(roman_string)
-    if length > 3:
-        for i in range(length-1):
-            if roman[roman_string[i]] < roman[roman_string[i+1]]:
-                check += 1
-    if check >= 1:
-        return 0
+ #   if length > 3:
+#        for i in range(length-1):
+#            if roman[roman_string[i]] < roman[roman_string[i+1]]:
+#                check += 1
+#    if check >= 1:
+#        return 0
 
     for idx in range(length):
         result += roman[roman_string[idx]]
