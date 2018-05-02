@@ -34,14 +34,14 @@ class Square:
         return self.__size * self.__size
 
     """
-    property for self
+    property for self to retrieve it
     """
     @property
     def size(self):
         return self.__size
 
     """
-    setter for self
+    setter for self to set it
     """
     @size.setter
     def size(self, value):
@@ -53,14 +53,14 @@ class Square:
             self.__size = value
 
     """
-    property for position
+    property for position to retrieve it
     """
     @property
     def position(self):
         return self.__position
 
     """
-    setter for position
+    setter for position to set it
     """
     @position.setter
     def position(self, value):
@@ -68,7 +68,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         for elem in value:
             if isinstance(elem, int) is False or elem < 0:
-                raise TypeError("position must be a tuple of"
+                raise TypeError("position must be a tuple of "
                                 "2 positive integers")
         self.__position = value
 
