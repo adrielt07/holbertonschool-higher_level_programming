@@ -23,10 +23,9 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         for elem in position:
             if isinstance(elem, int) is False or elem < 0:
-                raise TypeError("position must be a tuple of"
+                raise TypeError("position must be a tuple of "
                                 "2 positive integers")
-        else:
-            self.__position = position
+        self.__position = position
 
     """
     Calculates the area of the square
