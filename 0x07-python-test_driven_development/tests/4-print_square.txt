@@ -1,0 +1,50 @@
+4-print_square Module
+====================
+Prints a square with '#' characters
+
+Import Module:
+
+      >>> print_square = __import__('4-print_square').print_square
+
+Usage:
+
+      >>> print_square(4)
+      ####
+      ####
+      ####
+      ####
+
+      >>> print_square(10)
+      ##########
+      ##########
+      ##########
+      ##########
+      ##########
+      ##########
+      ##########
+      ##########
+      ##########
+      ##########
+
+      >>> print_square(0)
+
+      >>> print_square(1)
+      #
+
+Checks for Documentation:
+
+      >>> print(len(__import__("4-print_square").__doc__) > 0)
+      True
+
+      >>> print(len(__import__("4-print_square").print_square.__doc__) > 0)
+      True
+
+If Errors:
+
+      >>> print_square("abc") # doctest: +ELLIPSIS
+      Traceback (most recent call last):
+      TypeError: size must ... integer
+
+      >>> print_square(-1) # doctest: +ELLIPSIS
+      Traceback (most recent call last):
+      ValueError: size must ... >= 0
