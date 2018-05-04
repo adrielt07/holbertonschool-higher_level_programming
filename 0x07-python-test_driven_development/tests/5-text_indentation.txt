@@ -1,0 +1,28 @@
+5-text_indentation Module
+=========================
+function that prints a text with 2 new lines after each of
+these characters: ., ? and :
+
+Import Module:
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Usage:
+
+	>>> text_indentation("hello great.")
+	hello great.
+	<BLANKLINE>
+
+Checks for documentation:
+
+        >>> print(len(__import__("5-text_indentation").__doc__) > 0)
+        True
+
+        >>> print(len(__import__("5-text_indentation").text_indentation.__doc__) > 0)
+        True
+
+Errors:
+
+	>>> text_indentation(123) # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+      	TypeError: text must ... string
