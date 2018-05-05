@@ -10,6 +10,7 @@ class mytest(unittest.TestCase):
     def test_output(self):
         self.assertAlmostEqual(max_integer(my_list), 4)
         self.assertAlmostEqual(max_integer(my_list), 4)
+        self.assertAlmostEqual(max_integer([]), None)
 
     def test_listtype(self):
         self.assertNotIsInstance(max_integer(my_list), list, msg="Error")
