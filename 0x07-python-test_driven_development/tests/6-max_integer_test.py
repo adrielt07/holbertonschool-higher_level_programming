@@ -18,6 +18,8 @@ class mytest(unittest.TestCase):
         self.assertEqual(max_integer([5+5, 1, 3, 5]), 10)
         self.assertEqual(max_integer([10-2, 1, 3, 5]), 8)
         self.assertEqual(max_integer([5*5, 1, 3, 5]), 25)
+        with self.assertRaises(ZeroDivisionError):
+            max_integer([-1.1, -2.3, 5/0])
 
     def test_string(self):
         self.assertEqual(max_integer(["a", "str", "hi", "hello"]), "str")
@@ -36,7 +38,7 @@ class mytest(unittest.TestCase):
         self.assertRaises(TypeError, max_integer, [1, 3, None],
                           msg="unorderable types: NoneType() > int()")
 
-    def test_Error(self):
+    def test_typeErr(self):
         self.assertRaises(TypeError, max_integer, [1, 2, "str"],
                           msg="unorderable types: str() > int()")
         self.assertRaises(TypeError, max_integer, [1, 2, 3+5j],
