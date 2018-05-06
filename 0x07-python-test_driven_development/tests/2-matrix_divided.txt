@@ -41,3 +41,8 @@ If Errors:
       >>> print(matrix_divided(matrix, "a")) # doctest: +ELLIPSIS
       Traceback (most recent call last):
       TypeError: div must be a number
+
+      >>> print(matrix_divided())
+      ... # doctest: +ELLIPSIS
+      Traceback (most recent call last):
+      TypeError: matrix_divided() missing ... 'matrix' and 'div'
