@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
-matrix_divided - divides all elements in a matrix.
+matrix - divided - divides all elements in a matrix.
 def(s):
 1) matrix_divided
 """
+
 
 def matrix_divided(matrix, div):
     """
@@ -14,17 +15,14 @@ def matrix_divided(matrix, div):
     Requirements:
     1) Elements in the matrix should be a list
     2) Elements in the list  should be int or floats
-    2) Lists in the matrix should have the same length
+    3) Lists in the matrix should have the same length
 
     div - number to multiply by (can't be zero)
     Requirements:
     1) Must be a number
     2) Can't be zero
 
-    Failure to meet the requirements will raise an exception error
-
-    Return:
-    new matrix with quotient (rounded in two decimal places max)
+    Return: new matrix with quotient (rounded in two decimal places max)
     """
     new_list = []
     ex_list = []
@@ -42,6 +40,7 @@ def matrix_divided(matrix, div):
         elif isinstance(matrix[idx], list) is False:
             raise TypeError("matrix must be a matrix (list of lists) of"
                             " integers/floats")
+
     for elem in matrix:
         ex_list = []
         for elm in elem:
@@ -50,5 +49,4 @@ def matrix_divided(matrix, div):
                                 " integers/floats")
             ex_list.append(round(elm / div, 2))
         new_list.append(ex_list)
-
     return new_list

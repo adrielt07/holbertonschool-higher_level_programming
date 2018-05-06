@@ -46,3 +46,8 @@ If Errors:
       ... # doctest: +ELLIPSIS
       Traceback (most recent call last):
       TypeError: matrix_divided() missing ... 'matrix' and 'div'
+
+      >>> print(matrix_divided([12],))
+      ... # doctest: +ELLIPSIS
+      Traceback (most recent call last):
+      TypeError: matrix_divided() missing ... 'div'
