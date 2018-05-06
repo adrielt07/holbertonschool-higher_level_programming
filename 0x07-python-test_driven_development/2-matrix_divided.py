@@ -5,7 +5,6 @@ def(s):
 1) matrix_divided
 """
 
-
 def matrix_divided(matrix, div):
     """
     Divides elems in the matrix by div and returns a new list
