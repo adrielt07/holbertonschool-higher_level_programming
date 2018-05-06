@@ -43,3 +43,8 @@ class mytest(unittest.TestCase):
                           msg="unorderable types: str() > int()")
         self.assertRaises(TypeError, max_integer, [1, 2, 3+5j],
                           msg="unorderable types: str() > complex()")
+
+    def test_documentation(self):
+        self.assertGreater(len(__import__("6-max_integer").__doc__), 0)
+        self.assertGreater(len(__import__("6-max_integer")
+                               .max_integer.__doc__), 0)
