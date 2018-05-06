@@ -1,11 +1,6 @@
 #!/usr/bin/python3
 """
 add_integer adds two integers
-
-Args:
-a - takes an int
-b - takes an int, default value is 98
-
 Return:
 Sum of a and b
 """
