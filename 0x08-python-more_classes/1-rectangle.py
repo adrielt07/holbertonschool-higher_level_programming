@@ -5,6 +5,8 @@ Module with Class Rectangle
 
 
 class Rectangle:
+    """defines a rectangle
+    """
     def __init__(self, width=0, height=0):
         """ Initialize variables width and height
         """
