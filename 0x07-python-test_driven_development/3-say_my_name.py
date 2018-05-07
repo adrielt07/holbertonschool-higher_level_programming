@@ -7,25 +7,24 @@ def(s):
 
 
 def say_my_name(first_name, last_name=""):
-     """
-     Prints - My name is first_name last_name
+    """
+    Prints - My name is first_name last_name
+    args:
 
-     args:
+    first_name
+    Requirements:
+    1) Must be a string
 
-     first_name
-     Requirements:
-     1) Must be a string
+    last_name
+    Requirements:
+    1) Must be a string
+    2) Default value is ""
 
-     last_name
-     Requirements:
-     1) Must be a string
-     2) Default value is ""
+    Failure to meet the requirements will raise an exception
+    """
+    if isinstance(first_name, str) is False:
+        raise TypeError("first_name must be a string")
+    if isinstance(last_name, str) is False:
+        raise TypeError("last_name must be a string")
 
-     Failure to meet the requirements will raise an exception
-     """
-     if isinstance(first_name, str) is False:
-          raise TypeError("first_name must be a string")
-     if isinstance(last_name, str) is False:
-          raise TypeError("last_name must be a string")
-
-     print("My name is {} {}".format(first_name, last_name))
+    print("My name is {} {}".format(first_name, last_name))

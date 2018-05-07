@@ -34,3 +34,7 @@ If Errors:
       >>> say_my_name(12, "Smith") # doctest: +ELLIPSIS
       Traceback (most recent call last):
       TypeError: first_name must ... string
+
+      >>> say_my_name() # doctest: +ELLIPSIS
+      Traceback (most recent call last):
+      TypeError: say_my_name() missing ... 'first_name'

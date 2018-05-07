@@ -15,6 +15,10 @@ Usage:
       >>> print(matrix)
       [[1, 2, 3], [4, 5, 6]]
 
+
+      >>> print(matrix_divided(matrix, float('inf')))
+      [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
 Checks for Documentation:
 
       >>> print(len(__import__("2-matrix_divided").__doc__) > 0)
@@ -41,3 +45,13 @@ If Errors:
       >>> print(matrix_divided(matrix, "a")) # doctest: +ELLIPSIS
       Traceback (most recent call last):
       TypeError: div must be a number
+
+      >>> print(matrix_divided())
+      ... # doctest: +ELLIPSIS
+      Traceback (most recent call last):
+      TypeError: matrix_divided() missing ... 'matrix' and 'div'
+
+      >>> print(matrix_divided([12],))
+      ... # doctest: +ELLIPSIS
+      Traceback (most recent call last):
+      TypeError: matrix_divided() missing ... 'div'

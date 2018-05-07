@@ -48,3 +48,7 @@ If Errors:
       >>> print_square(-1) # doctest: +ELLIPSIS
       Traceback (most recent call last):
       ValueError: size must ... >= 0
+
+      >>> print_square() # doctest: +ELLIPSIS
+      Traceback (most recent call last):
+      TypeError: print_square() missing ... 'size'

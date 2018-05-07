@@ -1,11 +1,6 @@
 #!/usr/bin/python3
 """
 add_integer adds two integers
-
-Args:
-a - takes an int
-b - takes an int, default value is 98
-
 Return:
 Sum of a and b
 """
@@ -15,8 +10,8 @@ def add_integer(a, b=98):
     """
     Adds two int or float types only. Else, raise a Type Error
     """
-    if isinstance(a, int) is False and isinstance(a, float) is False:
+    if isinstance(a, (float, int)) is False:
         raise TypeError("a must be an integer")
-    if isinstance(b, int) is False and isinstance(b, float) is False:
+    if isinstance(b, (float, int)) is False:
         raise TypeError("b must be an integer")
     return int(a) + int(b)
