@@ -77,8 +77,8 @@ class Rectangle:
     def __str__(self):
         """Print rectanlge with character '#'
         """
-        if self.__width is 0 or self.__height is 0:
-            return "\n"
+        if self.__width == 0 or self.__height == 0:
+            return ""
         else:
             return "\n".join("".join("#" for w in range(self.__width))
                              for h in range(self.__height))
