@@ -16,14 +16,19 @@ def text_indentation(text):
     1) text must be a string
     """
     special_ch = [':', '?', '.']
-
+    i = 0
     if isinstance(text, str) is False:
         raise TypeError("text must be a string")
-    for idx in range(len(text)):
-        if text[idx] == " " and text[idx - 1] in special_ch:
-            print("", end="")
-        else:
-            print(text[idx], end="")
+    l = text.split()
 
-        if text[idx] in special_ch:
-            print("\n")
+    for n in range(len(l)):
+        if l[n][-1] in special_ch:
+            print(l[n] + "\n")
+        else:
+            if n == len(l) - 1:
+                print(l[n], end="")
+            else:
+                print(l[n], end=" ")
+
+
+#text_indentation("Holberton. School? How are you:    John")
