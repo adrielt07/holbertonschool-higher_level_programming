@@ -78,6 +78,7 @@ class Rectangle:
         """Print rectanlge with character '#'
         """
         if self.__width is 0 or self.__height is 0:
-            print()
-        return "\n".join("".join("#" for w in range(self.__width))
-                         for h in range(self.__height))
+            return "\n"
+        else:
+            return "\n".join("".join("#" for w in range(self.__width))
+                             for h in range(self.__height))
