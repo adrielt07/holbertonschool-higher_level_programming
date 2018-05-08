@@ -6,9 +6,8 @@ Class is: Rectangle
 
 
 class Rectangle:
-    number_of_instances = 0
-    print_symbol = "#"
-    """Rectangle Class: takes two arguments - width and height
+    """
+    Rectangle Class: takes two arguments - width and height
     width and height has to be an int and can't a negative value
 
     Example Usage:
@@ -24,8 +23,11 @@ class Rectangle:
     Rectangle.__del__() - deletes rectangle
     Rectangle.bigger_or_equal() - compare two rectangle and returns bigger area
     """
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
-        """ Initializing variables width and height
+        """Initializing variables width and height
         """
         self.__width = width
         self.__height = height
@@ -33,13 +35,13 @@ class Rectangle:
 
     @property
     def width(self):
-        """ Retrieving width
+        """Retrieving width
         """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ Setting width
+        """Setting width
         """
         if isinstance(value, int) is False:
             raise TypeError("width must be an integer")
@@ -49,13 +51,13 @@ class Rectangle:
 
     @property
     def height(self):
-        """ Retrieving height
+        """Retrieving height
         """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """ Setting height
+        """Setting height
         """
         if isinstance(value, int) is False:
             raise TypeError("height must be an integer")
@@ -64,17 +66,17 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """ Calculates the area of a rectangle
+        """Calculates the area of a rectangle
         """
         return self.__height * self.__width
 
     def perimeter(self):
-        """ Calculates the perimeter of a rectangle
+        """Calculates the perimeter of a rectangle
         """
         return (self.__height + self.__width) * 2
 
     def __str__(self):
-        """ Print rectanlge with character '#'
+        """Print rectanlge with character '#'
         """
         if self.__width is 0 or self.__height is 0:
             print()
@@ -83,7 +85,7 @@ class Rectangle:
                          for h in range(self.__height))
 
     def __repr__(self):
-        """ Prints width and height of rectangle
+        """Prints width and height of rectangle
         """
         return ("Rectangle({}, {})".format(self.__width, self.__height))
 
