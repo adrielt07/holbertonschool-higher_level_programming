@@ -19,16 +19,7 @@ def text_indentation(text):
     i = 0
     if isinstance(text, str) is False:
         raise TypeError("text must be a string")
-    l = text.split()
 
-    for n in range(len(l)):
-        if l[n][-1] in special_ch:
-            print(l[n] + "\n")
-        else:
-            if n == len(l) - 1:
-                print(l[n], end="")
-            else:
-                print(l[n], end=" ")
+    new_text = "".join(n if n not in special_ch else n + "\n\n" for n in text)
 
-
-#text_indentation("Holberton. School? How are you:    John")
+    print("\n".join(n.strip() for n in new_text.split("\n")), end="")
