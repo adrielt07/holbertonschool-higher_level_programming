@@ -19,20 +19,20 @@ class Rectangle:
     Rectangle.__str__() - return an image of rectangle made of '#' symbols
     """
     def __init__(self, width=0, height=0):
-        """ Initializing variables width and height
+        """Initializing variables width and height
         """
         self.__width = width
         self.__height = height
 
     @property
     def width(self):
-        """ Retrieving width
+        """Retrieving width
         """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ Setting width
+        """Setting width
         """
         if isinstance(value, int) is False:
             raise TypeError("width must be an integer")
@@ -42,13 +42,13 @@ class Rectangle:
 
     @property
     def height(self):
-        """ Retrieving height
+        """Retrieving height
         """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """ Setting height
+        """Setting height
         """
         if isinstance(value, int) is False:
             raise TypeError("height must be an integer")
@@ -57,17 +57,17 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """ Calculates the area of a rectangle
+        """Calculates the area of a rectangle
         """
         return self.__height * self.__width
 
     def perimeter(self):
-        """ Calculates the perimeter of a rectangle
+        """Calculates the perimeter of a rectangle
         """
         return (self.__height + self.__width) * 2
 
     def __str__(self):
-        """ Print rectanlge with character '#'
+        """Print rectanlge with character '#'
         """
         if self.__width is 0 or self.__height is 0:
             print()
