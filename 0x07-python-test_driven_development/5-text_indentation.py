@@ -15,10 +15,14 @@ def text_indentation(text):
     Requirement:
     1) text must be a string
     """
+
     special_ch = [':', '?', '.']
+
     if isinstance(text, str) is False:
         raise TypeError("text must be a string")
 
-    new_text = "".join(n if n not in special_ch else n + "\n\n" for n in text)
+    new_text = "".join(n if n not in special_ch
+                       else n + "\n\n" for n in text)
 
-    print("\n".join(n.strip() for n in new_text.split("\n")), end="")
+    print("\n".join(n.strip() for n in
+                    new_text.split("\n")), end="")
