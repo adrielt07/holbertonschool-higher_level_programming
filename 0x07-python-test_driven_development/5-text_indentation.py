@@ -16,7 +16,6 @@ def text_indentation(text):
     1) text must be a string
     """
     special_ch = [':', '?', '.']
-    i = 0
     if isinstance(text, str) is False:
         raise TypeError("text must be a string")
 
