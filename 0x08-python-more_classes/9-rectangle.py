@@ -28,9 +28,9 @@ class Rectangle:
     Rectangle.bigger_or_equal() - compare two rectangle and returns bigger area
     Rectangle.square() - creates an instance with all equal side (square)
     """
-
     number_of_instances = 0
     print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """Initializing variables width and height
         """
