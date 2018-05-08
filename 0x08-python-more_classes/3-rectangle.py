@@ -5,7 +5,18 @@ Module with class Rectangle
 
 
 class Rectangle:
-    """defines a rectangle
+    """Rectangle Class: takes two arguments - width and height
+    width and height has to be an int and can't a negative value
+
+    Example Usage:
+    Rectangle(4, 2)
+
+    Functions:
+    Rectangle.width() - returns value of width
+    Rectangle.height() - returns value of height
+    Rectangle.area() - returns the area of rectangle
+    Rectangle.perimeter() - returns the perimeter of rectangle
+    Rectangle.__str__() - return an image of rectangle made of '#' symbols
     """
     def __init__(self, width=0, height=0):
         """ Initializing variables width and height

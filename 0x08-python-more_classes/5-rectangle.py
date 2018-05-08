@@ -1,11 +1,25 @@
 #!/usr/bin/python3
 """
-Module with class Rectangle
+Module that defines a rectangle
+Class is: Rectangle
 """
 
 
 class Rectangle:
-    """defines a rectangle
+    """Rectangle Class: takes two arguments - width and height
+    width and height has to be an int and can't a negative value
+
+    Example Usage:
+    Rectangle(4, 2)
+
+    Functions:
+    Rectangle.width() - returns value of width
+    Rectangle.height() - returns value of height
+    Rectangle.area() - returns the area of rectangle
+    Rectangle.perimeter() - returns the perimeter of rectangle
+    Rectangle.__str__() - return an image of rectangle made of '#' symbols
+    Rectangle.__repr__() - returns a string Rectangle(<size>, <height>)
+    Rectangle.__del__() - deletes rectangle
     """
     def __init__(self, width=0, height=0):
         """ Initializing variables width and height
@@ -72,5 +86,12 @@ class Rectangle:
         return "\n".join("".join("#" for w in range(self.__width))
                          for h in range(self.__height))
 
+    def __repr__(self):
+        """ Prints width and height of rectangle
+        """
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
+
     def __del__(self):
-        print("Bye rectangle...")
+        """Deletes a rectangle
+        """
+        return ("Bye rectangle...")

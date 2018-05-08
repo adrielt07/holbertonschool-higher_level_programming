@@ -1,11 +1,20 @@
 #!/usr/bin/python3
 """
-Module with Class Rectangle
+Module that defines a rectangle
+Class is: Rectangle
 """
 
 
 class Rectangle:
-    """defines a rectangle
+    """Rectangle Class: takes two arguments - width and height
+    width and height has to be an int and can't a negative value
+
+    Example Usage:
+    Rectangle(4, 2)
+
+    Functions:
+    Rectangle.width() - returns value of width
+    Rectangle.height() - returns value of height
     """
     def __init__(self, width=0, height=0):
         """ Initialize variables width and height
