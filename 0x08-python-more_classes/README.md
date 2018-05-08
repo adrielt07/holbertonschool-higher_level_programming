@@ -26,7 +26,27 @@ The description below summarieze what I added as I go.
 - 6-rectangle.py - Added a class attribute "number_of_instances" which increments when new instance is created and decrements when del is called
 - 7-rectangle.py - Added a class attribute "print_symbol" replaces the "#" symbol from 3-rectangle
 - 8-rectangle.py - Added method bigger_or_equal(rect_1, rect_2) which compares the area of two rectangles and return which is bigger
-- 9-rectangle.py - Added square(size) method which creates a new instance with equal width and height
+- 9-rectangle.py - Final: Added square(size) method which creates a new instance with equal width and height
+
+Usage Example from Python Interpreter:
+>>> Rectangle = __import__('9-rectangle').Rectangle
+>>> my_rectangle = Rectangle(2, 4)
+>>> my_rectangle.area()
+8
+>>> my_rectangle.perimeter()
+12
+>>> print(str(my_rectangle))
+##
+##
+##
+##
+>> my_rectangle.print_symbol = "&"
+&&
+&&
+&&
+&&
+>>> repr(my_rectangle)
+'Rectangle(2, 4)'
 
 ### Authors
 Adriel Tolentino
