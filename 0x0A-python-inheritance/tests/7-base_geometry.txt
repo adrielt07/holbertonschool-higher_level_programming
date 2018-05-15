@@ -1,0 +1,41 @@
+7-base_geometry Module
+======================
+
+import module:
+       >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Documentation Check:
+       >>> print(len(BaseGeometry.__doc__) > 0)
+       True
+       >>> print(len(BaseGeometry.integer_validator.__doc__) > 0)
+       True
+
+Usage:
+       >>> bg = BaseGeometry()
+       >>> bg.integer_validator("my_int", 12)
+       >>> bg.integer_validator("width", 89)
+
+Error Test:
+       >>> bg.integer_validator("age", 0)
+       Traceback (most recent call last):
+       ValueError: age must be greater than 0
+
+       >>> bg.integer_validator("name", "John") # doctest: +ELLIPSIS
+       Traceback (most recent call last):
+       TypeError: name ... integer
+
+       >>> bg.integer_validator("name",) # doctest: +ELLIPSIS
+       Traceback (most recent call last):
+       TypeError: ... missing 1 required positional argument: ...
+
+       >>> bg.integer_validator() # doctest: +ELLIPSIS
+       Traceback (most recent call last):
+       TypeError: ... missing 2 required positional arguments: ...
+
+       >>> bg.integer_validator() # doctest: +ELLIPSIS
+       Traceback (most recent call last):
+       TypeError: ...
+
+       >>> bg.integer_validator() # doctest: +ELLIPSIS
+       Traceback (most recent call last):
+       TypeError: ...
