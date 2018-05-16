@@ -1,17 +1,18 @@
 #!/usr/bin/python3
 import sys
 import json
+import os
 
 
+my_list = []
 
-"""my_list = []
-for arg in sys.argv[1:]:
-my_list.append(arg)
-"""
+if os.path.exists("add_item.json") == True:
+    with open("add_item.json", "r") as f:
+        words = f.readline()
+        my_list = json.loads(words)
 
-with open('add_item.json', 'r+') as f:
-    my_list = json.load('add_item.json')
-    for elem in sys.argv[1:]:
-        my_list.append(elem)
+for elem in sys.argv[1:]:
+    my_list.append(elem)
 
+with open("add_item.json", "w") as f:
     json.dump(my_list, f)
