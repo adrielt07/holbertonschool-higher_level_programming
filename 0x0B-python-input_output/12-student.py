@@ -17,11 +17,11 @@ class Student:
         """
         retrieves a dictionary representation of a student instance
         """
-        if attrs == None:
+        if attrs is None:
             return self.__dict__
         else:
             new_dict = {}
-            if isinstance(attrs, list) == True:
+            if isinstance(attrs, list) is True:
                 for elem in attrs:
                     for key, val in self.__dict__.items():
                         if elem == key:
