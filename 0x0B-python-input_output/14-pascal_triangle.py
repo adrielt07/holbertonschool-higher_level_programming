@@ -10,14 +10,12 @@ def pascal_triangle(n):
         return []
 
     my_list = []
-    temp = []
 
-    for i in range(1, n):
-        temp = []
-        for k in range(i):
-            temp.append(k ** k)
-        my_list.append(temp)
-
-    print(my_list)
-
-print(pascal_triangle(5))
+    for i in range(n):
+        my_list.append([])
+        my_list[i].append(1)
+        for j in range(1, i):
+            my_list[i].append(my_list[i - 1][j - 1] + my_list[i - 1][j])
+        if(n != 0):
+            my_list[i].append(1)
+    return (my_list)
