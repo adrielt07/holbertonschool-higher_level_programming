@@ -17,11 +17,11 @@ class Student:
         """
         retrieves a dictionary representation of a student instance
         """
-        if attrs == None:
+        if attrs is None:
             return self.__dict__
         else:
             new_dict = {}
-            if isinstance(attrs, list) == True:
+            if isinstance(attrs, list) is True:
                 for elem in attrs:
                     for key, val in self.__dict__.items():
                         if elem == key:
@@ -33,5 +33,5 @@ class Student:
         replaces all attributes of the Student instance
         """
         for key, val in json.items():
-            if hasattr(self, key) == True:
+            if hasattr(self, key) is True:
                 setattr(self, key, val)
