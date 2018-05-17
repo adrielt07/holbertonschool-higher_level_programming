@@ -6,7 +6,7 @@ import os
 
 my_list = []
 
-if os.path.exists("add_item.json") == True:
+if os.path.exists("add_item.json") is True:
     with open("add_item.json", "r") as f:
         words = f.readline()
         my_list = json.loads(words)
