@@ -3,9 +3,13 @@ from models.base import Base
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
+        Base.checkattr(width, 1)
         self.__width = width
+        Base.checkattr(height, 2)
         self.__height = height
+        Base.checkattr(x, 3)
         self.__x = x
+        Base.checkattr(y, 4)
         self.__y = y
         super().__init__(id)
 
@@ -16,6 +20,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """setting width"""
+        Base.checkattr(value, 1)
         self.__width = value
 
     @property
@@ -25,6 +30,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """setting height"""
+        Base.checkattr(value, 2)
         self.__height = value
 
     @property
@@ -34,6 +40,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """setting x"""
+        Base.checkattr(value, 3)
         self.__x = value
 
     @property
@@ -43,4 +50,5 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """setting y"""
+        Base.checkattr(value, 4)
         self.__y = value
