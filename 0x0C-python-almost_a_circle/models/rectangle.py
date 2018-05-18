@@ -15,6 +15,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """width getter"""
         return self.__width
 
     @width.setter
@@ -25,6 +26,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """height getter"""
         return self.__height
 
     @height.setter
@@ -35,6 +37,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """x getter"""
         return self.__x
 
     @x.setter
@@ -45,6 +48,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """y getter"""
         return self.__y
 
     @y.setter
@@ -54,15 +58,22 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """returns the area"""
         return self.__height * self.__width
 
     def display(self):
+        """image of rectangle"""
+        for n in range(self.__y):
+            print()
         for i in range(self.__height):
+            for beg in range(self.__x):
+                print(" ", end="")
             for k in range(self.__width):
                 print('#', end="")
             print()
 
     def __str__(self):
+        """prints string"""
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
                                                 self.id, self.__x, self.__y,
                                                 self.__width, self.__height)
