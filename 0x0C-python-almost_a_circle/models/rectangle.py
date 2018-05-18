@@ -52,3 +52,6 @@ class Rectangle(Base):
         """setting y"""
         Base.checkattr(value, 4)
         self.__y = value
+
+    def area(self):
+        return self.__height * self.__width
