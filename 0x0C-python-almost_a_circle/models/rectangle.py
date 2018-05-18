@@ -63,7 +63,7 @@ class Rectangle(Base):
 
     def display(self):
         """image of rectangle"""
-        for n in range(self.__y):
+        for top in range(self.__y):
             print()
         for i in range(self.__height):
             for beg in range(self.__x):
