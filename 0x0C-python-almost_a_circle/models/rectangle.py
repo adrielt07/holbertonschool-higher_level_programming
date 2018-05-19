@@ -75,8 +75,13 @@ class Rectangle(Base):
                 print('#', end="")
             print()
 
-    def __str__(self):
+    def __str__(self, subclass=None):
         """prints string"""
+        if subclass != None:
+            if issubclass(subclass, Rectangle) is True:
+                return "[{}] ({}) {}/{} - {}".format(type(self).__name__,
+                                                self.id, self.__x, self.__y,
+                                                self.__width)
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
                                                 self.id, self.__x, self.__y,
                                                 self.__width, self.__height)
