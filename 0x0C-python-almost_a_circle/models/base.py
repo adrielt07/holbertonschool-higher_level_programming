@@ -11,14 +11,14 @@ class Base:
 
         Purpose: Assigned an id for each instance
         Usages:
-        b1 = base(12)
+        b1 = Base(12)
         b1 will have id of 12 (b1.id)
 
         if no id specified, id will automatically get assigned
         starting from 1 and increments by 1 each call
-        b2 = base()
+        b2 = Base()
         b2 will ahve id of 1 (b2.id)
-        b3 = base()
+        b3 = Base()
         b3 will have id of 2 (b2.id)
         """
         if id is not None:
