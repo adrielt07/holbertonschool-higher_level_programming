@@ -7,45 +7,48 @@ class Square(Rectangle):
     """Class that defines a square"""
     def __init__(self, size, x=0, y=0, id=None):
         """initialize using rectangle class"""
-        self.__size = size
-        self.__x = x
-        self.__y = y
-        super().__init__(self.__size, self.__size, self.__x, self.__y, id)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """print string"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.__x, self.__y, self.__size)
         return super().__str__(Square)
 
     @property
     def size(self):
         """returns size"""
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
         super().checkattr(value, 1)
-        self.__size = value
+        self.width = value
 
     def update(self, *args, **kwargs):
         """updates the attributes"""
         if len(args) != 0:
-            if len(args) == 1:
-                self.id = args[0]
-            elif len(args) == 2:
-                self.id = args[0]
-                self.__size = args[1]
-            elif len(args) == 3:
-                self.id = args[0]
-                self.__size = args[1]
-                self.__x = args[2]
-            elif len(args) == 4:
-                self.id = args[0]
-                self.__size = args[1]
-                self.__x = args[2]
-                self.__y = args[3]
+            a = list(args)
+            super().update(a, kwargs)
 
         else:
             for key, val in kwargs.items():
                 if hasattr(self, key) is True:
                         setattr(self, key, val)
+
+        """
+        if len(args) != 0:
+            if len(args) == 1:
+                self.id = args[0]
+            elif len(args) == 2:
+                self.id = args[0]
+                self.size = args[1]
+            elif len(args) == 3:
+                self.id = args[0]
+                self.size = args[1]
+                self.x = args[2]
+            elif len(args) == 4:
+                self.id = args[0]
+                self.size = args[1]
+                self.x = args[2]
+                self.y = args[3]
+
+        """
