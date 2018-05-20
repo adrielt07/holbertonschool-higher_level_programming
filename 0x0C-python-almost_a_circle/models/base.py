@@ -35,6 +35,18 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """
+        writes the JSON string representation of list_objs to a file
+        """
+        with open("{}.json".format(cls.__name__), "w") as f:
+            new_dict = {}
+            s = ""
+            for inst in list_objs:
+                s += cls.to_json_string(inst.to_dictionary())
+            f.write(s)
+
     @staticmethod
     def checkattr(value, num):
         """
