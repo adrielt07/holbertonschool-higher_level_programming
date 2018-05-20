@@ -105,6 +105,10 @@ class Rectangle(Base):
                         setattr(self, key, val)
 
     def to_dictionary(self):
+        """
+        Prints the following dictionary:
+        id, width, height, x, y
+        """
         new_dict = {}
         keys = ['id', 'width', 'height', 'x', 'y']
 
