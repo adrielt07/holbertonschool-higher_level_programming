@@ -34,21 +34,15 @@ class Square(Rectangle):
                 if hasattr(self, key) is True:
                         setattr(self, key, val)
 
+    def to_dictionary(self):
         """
-        if len(args) != 0:
-            if len(args) == 1:
-                self.id = args[0]
-            elif len(args) == 2:
-                self.id = args[0]
-                self.size = args[1]
-            elif len(args) == 3:
-                self.id = args[0]
-                self.size = args[1]
-                self.x = args[2]
-            elif len(args) == 4:
-                self.id = args[0]
-                self.size = args[1]
-                self.x = args[2]
-                self.y = args[3]
+        prints the following in dictionary:
+        id, size, x, y
+        """
+        new_dict = {}
+        keys = ['id', 'size', 'x', 'y']
 
-        """
+        for elem in keys:
+            new_dict[elem] =  getattr(self, elem)
+        return new_dict
+        super().to_dictionary
