@@ -51,16 +51,19 @@ class Base:
         tmp.update(**dictionary)
         return tmp
 
-
     @classmethod
     def load_from_file(cls):
         """
         creates new instance(s) from file
-        s = ""
-        open("{}.json".format(cls.__name__, "r")) as f:
-             for line in f.readline():
-                 pass
         """
+        s = ""
+        new_list = []
+        with open("{}.json".format(cls.__name__), "r") as f:
+            s = f.readlines()
+        print("printing s {}".format(s))
+        old_list = cls.from_json_string(s)
+        print("printing old list {}".format(old_list))
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """
@@ -79,9 +82,7 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return []
         loader = json.loads(json_string)
-        new_list = []
-        new_list.append(loader)
-        return new_list
+        return loader
 
     @staticmethod
     def checkattr(value, num):
