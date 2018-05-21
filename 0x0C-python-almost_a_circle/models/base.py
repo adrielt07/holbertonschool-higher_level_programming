@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import json
+import copy
 """Module only has one Class: Base"""
 
 class Base:
@@ -28,13 +29,6 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-    @staticmethod
-    def to_json_string(list_dictionaries):
-        if list_dictionaries is None or len(list_dictionaries) == 0:
-            return "[]"
-        else:
-            return json.dumps(list_dictionaries)
-
     @classmethod
     def save_to_file(cls, list_objs):
         """
@@ -48,8 +42,40 @@ class Base:
             s = cls.to_json_string(new_list)
             f.write(s)
 
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        converts dictionary to instance
+        """
+        tmp = cls(1, 1)
+        tmp.update(**dictionary)
+        return tmp
+
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        creates new instance(s) from file
+        s = ""
+        open("{}.json".format(cls.__name__, "r")) as f:
+             for line in f.readline():
+                 pass
+        """
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """
+        Converts list to string
+        """
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        else:
+            return json.dumps(list_dictionaries)
+
     @staticmethod
     def from_json_string(json_string):
+        """
+        Converts string to list
+        """
         if json_string is None or len(json_string) == 0:
             return []
         loader = json.loads(json_string)
@@ -86,3 +112,5 @@ class Base:
                 raise TypeError("y must be an integer")
             if value < 0:
                 raise ValueError("y must be >= 0")
+        else:
+            return None
