@@ -41,10 +41,11 @@ class Base:
         writes the JSON string representation of list_objs to a file
         """
         with open("{}.json".format(cls.__name__), "w") as f:
-            new_dict = {}
+            new_list = []
             s = ""
             for inst in list_objs:
-                s += cls.to_json_string(inst.to_dictionary())
+                new_list.append(inst.to_dictionary())
+            s = cls.to_json_string(new_list)
             f.write(s)
 
     @staticmethod
