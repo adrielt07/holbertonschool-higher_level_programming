@@ -59,10 +59,11 @@ class Base:
         s = ""
         new_list = []
         with open("{}.json".format(cls.__name__), "r") as f:
-            s = f.readlines()
-        print("printing s {}".format(s))
+            s = f.readline()
         old_list = cls.from_json_string(s)
-        print("printing old list {}".format(old_list))
+        for elem in old_list:
+            new_list.append(cls.create(**elem))
+        return new_list
 
     @staticmethod
     def to_json_string(list_dictionaries):
