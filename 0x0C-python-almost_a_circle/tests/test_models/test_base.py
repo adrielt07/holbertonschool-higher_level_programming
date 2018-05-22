@@ -25,7 +25,7 @@ class Test_Base(unittest.TestCase):
         self.assertEqual(b3.id, 22)
 
     """Testing all static methods"""
-    def test_staticmethod(self):
+    def test_checkattr(self):
         """Test value error"""
         self.assertRaises(ValueError, Base.checkattr, -1, 1)
         self.assertRaises(ValueError, Base.checkattr, -1, 2)
@@ -38,4 +38,18 @@ class Test_Base(unittest.TestCase):
         self.assertRaises(TypeError, Base.checkattr, "str", 4)
         self.assertRaises(TypeError, Base.checkattr, None, 4)
         self.assertRaises(TypeError, Base.checkattr, None)
-        
+
+    def test_to_json_string(self):
+        self.assertEqual(Base.to_json_string(None), "[]")
+        empty = {}
+        self.assertEqual(Base.to_json_string(empty), "[]")
+        dictionary = {'x': 2, 'width': 10, 'id': 1, 'height': 7, 'y': 8}
+        result = Base.to_json_string(dictionary)
+        self.assertEqual(result, str(result))
+        string = "testing"
+        self.assertEqual(Base.to_json_string(string), '"testing"')
+        self.assertEqual(Base.to_json_string([12, 42, 32]), '[12, 42, 32]')
+        """Error"""
+        self.assertRaises(TypeError, Base.to_json_string, -1)
+        self.assertRaises(TypeError, Base.to_json_string, 1234)
+        self.assertRaises(TypeError, Base.to_json_string, 13.24)
