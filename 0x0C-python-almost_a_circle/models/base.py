@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module only has one Class: Base"""
+"""
+Module only has one Class: Base
+"""
 import json
 
 
