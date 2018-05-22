@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 from models.base import Base
 
+
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         Base.checkattr(width, 1)
@@ -58,6 +59,7 @@ class Rectangle(Base):
         self.__y = value
 
     def checkatt(value, num):
+        """check attributes"""
         Base.checkattr(value, num)
 
     def area(self):
@@ -77,11 +79,11 @@ class Rectangle(Base):
 
     def __str__(self, subclass=None):
         """prints string"""
-        if subclass != None:
+        if subclass is not None:
             if issubclass(subclass, Rectangle) is True:
                 return "[{}] ({}) {}/{} - {}".format(type(self).__name__,
-                                                self.id, self.__x, self.__y,
-                                                     self.__width)
+                                                     self.id, self.__x,
+                                                     self.__y, self.__width)
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
                                                 self.id, self.__x, self.__y,
                                                 self.__width, self.__height)
@@ -113,5 +115,5 @@ class Rectangle(Base):
         keys = ['id', 'width', 'height', 'x', 'y']
 
         for elem in keys:
-            new_dict[elem] =  getattr(self, elem)
+            new_dict[elem] = getattr(self, elem)
         return new_dict

@@ -3,6 +3,7 @@ import json
 import copy
 """Module only has one Class: Base"""
 
+
 class Base:
     """Class for Shapes Class to inherent from"""
     __nb_objects = 0

@@ -43,6 +43,6 @@ class Square(Rectangle):
         keys = ['id', 'size', 'x', 'y']
 
         for elem in keys:
-            new_dict[elem] =  getattr(self, elem)
+            new_dict[elem] = getattr(self, elem)
         return new_dict
         super().to_dictionary
