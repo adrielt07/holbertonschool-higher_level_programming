@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 
-class BaseTest(unittest.TestCase):
+class Test_Base(unittest.TestCase):
     def test_doc(self):
         self.assertTrue(len(Base.__doc__) > 1)
         self.assertTrue(len(Base.__init__.__doc__) > 1)
