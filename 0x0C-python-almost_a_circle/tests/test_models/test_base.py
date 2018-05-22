@@ -38,3 +38,4 @@ class Test_Base(unittest.TestCase):
         self.assertRaises(TypeError, Base.checkattr, "str", 4)
         self.assertRaises(TypeError, Base.checkattr, None, 4)
         self.assertRaises(TypeError, Base.checkattr, None)
+        
