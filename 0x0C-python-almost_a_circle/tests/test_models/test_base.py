@@ -2,7 +2,6 @@
 
 import unittest
 from models.base import Base
-from models.rectangle import Rectangle
 
 class BaseTest(unittest.TestCase):
     def test_doc(self):
@@ -37,4 +36,3 @@ class BaseTest(unittest.TestCase):
         self.assertRaises(TypeError, Base.checkattr, "str", 4)
         self.assertRaises(TypeError, Base.checkattr, None, 4)
         self.assertRaises(TypeError, Base.checkattr, None)
-        self.assertRaises(TypeError, Base.checkattr, 4, None)
