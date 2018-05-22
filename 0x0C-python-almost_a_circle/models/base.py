@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-import json
-import copy
 """Module only has one Class: Base"""
+import json
 
 
 class Base:
