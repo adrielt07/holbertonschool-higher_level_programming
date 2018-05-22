@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-
 import unittest
 from models.base import Base
+
 
 class BaseTest(unittest.TestCase):
     def test_doc(self):
