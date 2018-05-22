@@ -31,10 +31,8 @@ class Square(Rectangle):
                 a.insert(1, self.width)
                 args = tuple(a)
             super().update(*args)
-
-        for key, val in kwargs.items():
-            if hasattr(self, key) is True:
-                setattr(self, key, val)
+        else:
+            super().update(**kwargs)
 
     def to_dictionary(self):
         """
