@@ -1,10 +1,27 @@
 #!/usr/bin/python3
-"""Module has one class: Square"""
+"""
+Module has one class: Square
+Inhereted from Rectangle
+"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Class that defines a square"""
+    """
+    Class that defines a square
+
+    Usage:
+    Square(size, x, y, id)
+    size are required
+
+    s1 = size(4)
+    s2 = size(5, 3, 2, 22)
+
+    size - sides of square
+    x - axis number front spaces when displaying square
+    y - axis number of above newline when displaying square
+    id - id assigned for each instance
+    """
     def __init__(self, size, x=0, y=0, id=None):
         """initialize using rectangle class"""
         super().__init__(size, size, x, y, id)

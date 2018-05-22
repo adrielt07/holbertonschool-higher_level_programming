@@ -1,9 +1,30 @@
 #!/usr/bin/python3
+"""
+Module rectangle has one class:
+Rectangle
+Inherent from base module
+"""
 from models.base import Base
 
 
 class Rectangle(Base):
+    """
+    This class defines a rectangle
+
+    Usage:
+    Rectangle(width, height, x, y, id)
+    width and height are required
+
+    b1 = Rectangle(3, 4)
+    b2 = Rectangle(5, 15, 3, 2, 23)
+
+    Width and Height are length of rectangle
+    x - axis number front spaces when displaying rectangle
+    y - axis number of above newline when displaying rectangle
+    id - id assigned for each instance
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initialize variables"""
         Base.checkattr(width, 1)
         self.__width = width
         Base.checkattr(height, 2)
