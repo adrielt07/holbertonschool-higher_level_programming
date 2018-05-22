@@ -26,13 +26,15 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """updates the attributes"""
         if len(args) != 0:
-            a = list(args)
-            super().update(a, kwargs)
+            if len(args) > 2:
+                a = list(args)
+                a.insert(1, self.width)
+                args = tuple(a)
+            super().update(*args)
 
-        else:
-            for key, val in kwargs.items():
-                if hasattr(self, key) is True:
-                        setattr(self, key, val)
+        for key, val in kwargs.items():
+            if hasattr(self, key) is True:
+                setattr(self, key, val)
 
     def to_dictionary(self):
         """
