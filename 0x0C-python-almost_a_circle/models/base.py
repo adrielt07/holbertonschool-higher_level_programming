@@ -49,9 +49,12 @@ class Base:
         """
         converts dictionary to instance
         """
-        tmp = cls(1, 1)
-        tmp.update(**dictionary)
-        return tmp
+        try:
+            tmp = cls(1, 1)
+            tmp.update(**dictionary)
+            return tmp
+        except:
+            return None
 
     @classmethod
     def load_from_file(cls):
