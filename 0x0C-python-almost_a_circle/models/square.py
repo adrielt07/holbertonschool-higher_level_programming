@@ -43,10 +43,6 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """updates the attributes"""
         if len(args) != 0:
-            if len(args) > 2:
-                a = list(args)
-                a.insert(1, self.width)
-                args = tuple(a)
             super().update(*args)
         else:
             super().update(**kwargs)

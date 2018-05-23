@@ -113,15 +113,12 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """updates the attributes"""
-        keys = ['id', 'width', 'height', 'x', 'y']
+        if type(self).__name__ == "Square":
+            keys = ['id', 'size', 'x', 'y']
+        else:
+            keys = ['id', 'width', 'height', 'x', 'y']
         if len(args) != 0:
-            if type(args[0]) is list:
-                value = list(args[0])
-                if len(value) > 2:
-                    value.insert(1, value[1])
-            else:
-                value = list(args)
-
+            value = list(args)
             for k, v in zip(keys, value):
                 setattr(self, k, v)
         else:
