@@ -24,6 +24,15 @@ class Test_Base(unittest.TestCase):
         b3 = Base(22)
         self.assertEqual(b3.id, 22)
 
+    def test_inheritance(self):
+        r1 = Rectangle(2, 3)
+        s1 = Square(4)
+        self.assertTrue(issubclass(type(r1), Base))
+        self.assertTrue(issubclass(type(s1), Base))
+
+    def test_save_to_file(self):
+        self.assertEqual(Base.save_to_file(None), None)
+
     """Testing all static methods"""
     def test_checkattr(self):
         """Test value error"""
@@ -49,7 +58,18 @@ class Test_Base(unittest.TestCase):
         string = "testing"
         self.assertEqual(Base.to_json_string(string), '"testing"')
         self.assertEqual(Base.to_json_string([12, 42, 32]), '[12, 42, 32]')
-        """Error"""
+        """Exceptions"""
         self.assertRaises(TypeError, Base.to_json_string, -1)
         self.assertRaises(TypeError, Base.to_json_string, 1234)
         self.assertRaises(TypeError, Base.to_json_string, 13.24)
+
+    def test_from_json_string(self):
+        string = '[{"height": 4, "width": 10, "id": 89}, \
+        {"height": 7, "width": 1, "id": 7}]'
+        self.assertEqual(Base.from_json_string(string),
+                         [{'height': 4, 'width': 10, 'id': 89},
+                          {'height': 7, 'width': 1, 'id': 7}])
+        self.assertEqual(Base.from_json_string(None), [])
+        """Exceptions"""
+        self.assertRaises(TypeError, Base.from_json_string, 123)
+        self.assertRaises(ValueError, Base.from_json_string, "sada")
