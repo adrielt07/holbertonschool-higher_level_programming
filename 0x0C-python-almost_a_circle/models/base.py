@@ -39,11 +39,14 @@ class Base:
         with open("{}.json".format(cls.__name__), "w") as f:
             new_list = []
             s = ""
-            for inst in list_objs:
-                if issubclass(type(inst), Base):
-                    new_list.append(inst.to_dictionary())
-            s = cls.to_json_string(new_list)
-            f.write(s)
+            try:
+                for inst in list_objs:
+                    if issubclass(type(inst), Base):
+                        new_list.append(inst.to_dictionary())
+                s = cls.to_json_string(new_list)
+                f.write(s)
+            except:
+                f.write("[]")
 
     @classmethod
     def create(cls, **dictionary):
