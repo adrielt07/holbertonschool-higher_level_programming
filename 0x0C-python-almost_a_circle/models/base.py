@@ -40,7 +40,8 @@ class Base:
             new_list = []
             s = ""
             for inst in list_objs:
-                new_list.append(inst.to_dictionary())
+                if issubclass(type(inst), Base):
+                    new_list.append(inst.to_dictionary())
             s = cls.to_json_string(new_list)
             f.write(s)
 
