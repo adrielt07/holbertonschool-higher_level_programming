@@ -68,3 +68,14 @@ class Test_Rectangle(unittest.TestCase):
     def test_str(self):
         r4 = Rectangle(3, 3, 5, 6, 8)
         self.assertEqual(r4.__str__(), "[Rectangle] (8) 5/6 - 3/3")
+
+    def test_to_dictionary_and_create(self):
+        r4 = Rectangle(5, 5, 8, 9, 3)
+        r4_dictionary = r4.to_dictionary()
+        self.assertIsInstance(r4_dictionary, dict)
+        r5 = r4.create(**r4_dictionary)
+        self.assertIsInstance(r5, Rectangle)
+        self.assertEqual(r5.width, 5)
+        self.assertEqual(r5.height, 5)
+        dummy_dictionary = {}
+        self.assertEqual(Base.create(**dummy_dictionary), None)
