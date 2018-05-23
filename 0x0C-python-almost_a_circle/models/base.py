@@ -58,14 +58,19 @@ class Base:
         """
         creates new instance(s) from file
         """
-        s = ""
         new_list = []
-        with open("{}.json".format(cls.__name__), "r") as f:
-            s = f.readline()
-        old_list = cls.from_json_string(s)
-        for elem in old_list:
-            new_list.append(cls.create(**elem))
-        return new_list
+        try:
+            with open("{}.json".format(cls.__name__), "r") as f:
+                for line in f:
+                    old_list = []
+                    s = ""
+                    s = line
+                    old_list = cls.from_json_string(s)
+                    for elem in old_list:
+                        new_list.append(cls.create(**elem))
+                return new_list
+        except:
+            return new_list
 
     @staticmethod
     def to_json_string(list_dictionaries):
