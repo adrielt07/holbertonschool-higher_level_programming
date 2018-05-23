@@ -85,6 +85,8 @@ class Rectangle(Base):
 
     def area(self):
         """returns the area"""
+        if type(self).__name__ == "Square":
+            return self.__width * self.__width
         return self.__height * self.__width
 
     def display(self):
