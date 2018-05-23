@@ -64,3 +64,7 @@ class Test_Rectangle(unittest.TestCase):
         self.assertEqual(r3.height, 12)
         self.assertEqual(r3.x, 6)
         self.assertEqual(r3.y, 7)
+
+    def test_str(self):
+        r4 = Rectangle(3, 3, 5, 6, 8)
+        self.assertEqual(r4.__str__(), "[Rectangle] (8) 5/6 - 3/3")
