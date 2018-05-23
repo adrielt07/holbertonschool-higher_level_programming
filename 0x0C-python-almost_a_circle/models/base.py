@@ -54,7 +54,10 @@ class Base:
         converts dictionary to instance
         """
         try:
-            tmp = cls(1, 1)
+            if cls.__name__ == "Square":
+                tmp = cls(1)
+            if cls.__name__ == "Rectangle":
+                tmp = cls(1, 1)
             tmp.update(**dictionary)
             return tmp
         except:
