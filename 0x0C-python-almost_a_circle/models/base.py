@@ -91,13 +91,27 @@ class Base:
         except:
             table_elem = '[]'
         with open("{}.csv".format(cls.__name__), "w") as csvfile:
-            elemwriter = csv.dictwriter(csvfile, keys)
+            elemwriter = csv.DictWriter(csvfile, table_elem[0].keys())
             elemwriter.writeheader()
-            elemwriter.writerows(csvs)
+            elemwriter.writerows(table_elem)
 
     @classmethod
     def load_from_file_csv(cls):
-        pass
+        import csv
+
+        try:
+            with open("{}.csv".format(cls.__name__), "r") as csvfile:
+                reader = csv.DictReader(csvfile)
+                elem = [row for row in reader]
+                for row in elem:
+                    for key, val in row.items():
+                        try:
+                            row[key] = int(val)
+                        except:
+                            pass
+            return [cls.create(**elems) for elems in elem]
+        except:
+            return []
 
     @staticmethod
     def to_json_string(list_dictionaries):
