@@ -82,6 +82,23 @@ class Base:
         except:
             return new_list
 
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        import csv
+
+        try:
+            table_elem = [x.to_dictionary() for x in list_objs]
+        except:
+            table_elem = '[]'
+        with open("{}.csv".format(cls.__name__), "w") as csvfile:
+            elemwriter = csv.dictwriter(csvfile, keys)
+            elemwriter.writeheader()
+            elemwriter.writerows(csvs)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        pass
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """
