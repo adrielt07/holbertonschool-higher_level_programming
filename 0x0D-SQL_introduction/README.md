@@ -7,3 +7,4 @@ https://stackoverflow.com/questions/607264/how-can-i-count-the-numbers-of-rows-t
 https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial
 https://www.techonthenet.com/mysql/order_by.php
 https://stackoverflow.com/questions/8752705/calculate-average-of-column-from-mysql-query
+http://www.tomjewett.com/dbdesign/dbdesign.php?page=functions.php
