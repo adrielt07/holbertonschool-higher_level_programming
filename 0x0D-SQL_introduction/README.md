@@ -8,3 +8,4 @@ https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial
 https://www.techonthenet.com/mysql/order_by.php
 https://stackoverflow.com/questions/8752705/calculate-average-of-column-from-mysql-query
 http://www.tomjewett.com/dbdesign/dbdesign.php?page=functions.php
+https://dev.mysql.com/doc/refman/8.0/en/charset-unicode-conversion.html
