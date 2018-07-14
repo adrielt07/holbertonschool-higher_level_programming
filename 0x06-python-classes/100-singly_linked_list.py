@@ -3,6 +3,7 @@
 Defines class node
 """
 
+
 class Node:
     """Creates a node"""
     def __init__(self, data, next_node=None):
@@ -35,6 +36,7 @@ class Node:
         if isinstance(value, Node) is False:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
+
 
 class SinglyLinkedList(Node):
     """Creates a node"""
