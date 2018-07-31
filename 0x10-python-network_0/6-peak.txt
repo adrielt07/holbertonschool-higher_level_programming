@@ -1,2 +1,2 @@
 #Answer
-nlogn
+O(nlog(n))
