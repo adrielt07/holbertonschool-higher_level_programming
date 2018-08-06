@@ -1,8 +1,8 @@
-#!/usr/bin/python3
+#!/usr/local/bin/python3
 import requests
 import sys
 
 if __name__ == '__main__':
-    value = {'email': argv[2]}
+    value = {'email': sys.argv[2]}
     r = requests.post(sys.argv[1], value)
-    print(r.text)
+    print("Your email is: {}".format(r.text))
