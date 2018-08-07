@@ -13,7 +13,10 @@ if __name__ == "__main__":
     except IndexError:
         value = {'q': ""}
     r = requests.post('http://0.0.0.0:5000/search_user', value)
-    res = r.json()
+    try:
+        res = r.json()
+    except:
+        print("Not a valid JSON")
     if len(res) == 0:
         print("No result")
     else:
