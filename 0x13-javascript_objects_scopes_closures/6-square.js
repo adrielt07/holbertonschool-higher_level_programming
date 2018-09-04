@@ -9,7 +9,8 @@ module.exports = class Square extends Rectangle {
   }
 
   // Method charPrint(c) - takes a Character that replaces 'X' when using print method
-  charPrint (C) {
-    super.print(C);
+  charPrint (c) {
+    if (c === undefined) { c = 'X' };
+    super.print(c);
   }
 };
