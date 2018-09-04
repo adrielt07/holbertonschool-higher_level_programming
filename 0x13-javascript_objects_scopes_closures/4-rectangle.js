@@ -9,9 +9,10 @@ module.exports = class Rectangle {
     this.height = h;
   }
   // Method print - prints the shape of the rectangle using 'X' symbol
-  print () {
+  print (symbol = 'X') {
+    this.symbol = symbol;
     let output = '';
-    for (let i = 0; i < this.width; i++) { output += 'X'; }
+    for (let i = 0; i < this.width; i++) { output += this.symbol; }
     for (let j = 0; j < this.height; j++) { console.log(output); }
   }
 
