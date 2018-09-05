@@ -9,7 +9,7 @@ if (process.argv[2] === undefined) {
 }
 
 request(url, function (error, response, body) {
-  if (error) { console.log(error); } 
+  if (error) { console.log(error); }
   if (response.statusCode === 200) {
     let parsed = JSON.parse(body);
     let info = {};
