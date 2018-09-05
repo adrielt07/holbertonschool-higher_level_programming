@@ -1,8 +1,14 @@
 #!/usr/bin/node
 
 const request = require('request');
+let url;
+if (process.argv[2] === undefined) {
+  url = 'https://jsonplaceholder.typicode.com/todos';
+} else {
+  url = process.argv[2];
+}
 
-request(process.argv[2], function (error, response, body) {
+request(url, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
