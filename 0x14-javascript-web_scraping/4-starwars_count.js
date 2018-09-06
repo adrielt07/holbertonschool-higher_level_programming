@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const request = require('request');
-let Wedge = 'https://swapi.co/api/people/18/';
+let id = '18';
 let count = 0;
 let url = process.argv[2];
 
@@ -11,8 +11,8 @@ request(url, function (error, response, body) {
   } else {
     let parsed = JSON.parse(body);
     for (let i in parsed.results) {
-      if (parsed.results[i].characters.includes(Wedge)) {
-        count++;
+      for (let j in parsed.results[i].characters) {
+        if (parsed.results[i].characters[j].search(id) !== -1) { count++; }
       }
     }
   }
