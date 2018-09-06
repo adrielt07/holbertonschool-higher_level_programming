@@ -1,10 +1,17 @@
 #!/usr/bin/node
 
 const request = require('request');
-
+let url;
 let Wedge = 'https://swapi.co/api/people/18/';
 let count = 0;
-request(process.argv[2], function (error, response, body) {
+
+if (url === undefined) {
+  url = 'http://swapi.co/api/films';
+} else {
+  url = process.argv[2];
+}
+
+request(url, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
