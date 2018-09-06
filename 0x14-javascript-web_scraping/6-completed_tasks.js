@@ -14,7 +14,7 @@ request(url, function (error, response, body) {
     let parsed = JSON.parse(body);
     let info = {};
     for (let i in parsed) {
-      if (parsed[i].userId in info === false) {
+      if (parsed[i].userId in info === false && parsed[i].completed === true) {
         info[parsed[i].userId] = 0;
       }
       if (parsed[i].completed === true) {
