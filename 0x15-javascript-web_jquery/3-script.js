@@ -1,4 +1,3 @@
-$(function()
-{
-    $("#red_header").addClass("red");
+$(function () {
+  $('#red_header').addClass('red');
 });
