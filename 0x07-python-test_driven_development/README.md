@@ -11,9 +11,9 @@
 - We strongly encourage you to work together on test cases, so that you don’t miss any edge case
 - Can't import standard Modules
 
-### Documentation
+## Documentation
 
-## Python
+### Python
 - 0-add_integer.py - function that adds 2 integers
 - 2-matrix_divided.py - function that divides all elements of a matrix
 - 3-say_my_name.py - function that prints My name is <first name> <last name>
@@ -21,7 +21,7 @@
 - 5-text_indentation.py - function that prints a text with 2 new lines after each of these characters: ., ? and :
 - 6-max_integer.py - find the max integer in a list
 
-## Tests Folder
+### Tests Folder
 - 0-add_integer.txt - doctest edge cases
 - 2-matrix_divided.txt - doctest edge cases
 - 3-say_my_name.txt - doctest edge cases
