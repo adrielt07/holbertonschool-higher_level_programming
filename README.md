@@ -102,7 +102,7 @@ Project consists of:
   - Use request and fetch API
   - Read and write file using fs module
   
-[0x15. Javascript - Web JQuery](./0x15. Javascript - Web JQuery)
+[0x15-javascript-web_jquery](./0x15-javascript-web_jquery)
   - select HTML elements in Javascript
   - select HTML elements with jQuery
   - ID, class and tag name selectors
